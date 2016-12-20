@@ -6,3 +6,5 @@ RUN set -ex; \
         libpng-dev \
     && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
     && docker-php-ext-install mbstring opcache pdo pdo_mysql zip
+
+CMD ["php-fpm"]
